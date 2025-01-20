@@ -1030,6 +1030,26 @@ function findmo(smo)
   return icher
 end
 
+function edit_moment_name()
+  if capencours then return end
+  capencours = true
+  local sel, ri
+  sel, ri = oneselected(1)
+  if not (sel) then
+    capencours = false
+    return
+  end
+  selected_med = sel
+  if bokmed then
+    enter_text_label = main_layout:add_label("<b><i>SUBSTITUTE name </i></b>   --->", 1, 2, 1)
+    caption_text_input = main_layout:add_text_input(sel, 2, 2, 5)
+  else
+    enter_text_label = main_layout:add_label("<b><i>SUBSTITUTE name </i></b>   --->", 1, 2, 2)
+    caption_text_input = main_layout:add_text_input(sel, 3, 2, 4)
+  end
+  confirm_capted = main_layout:add_button("OK", confirm_changemed, 7, 2, 1)
+end
+
 function jump_to_moment()
   if capencours then
     remindin()
