@@ -653,6 +653,7 @@ function ToMomentsGUI(medwin)
   MomentsGUI()
 end
 
+-- numbers for adding component (0,0,0)(column number, row, column width)
 function MomentsGUI()
   capencours = false
   affreverse = false
