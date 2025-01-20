@@ -150,7 +150,7 @@ function kwickfileok()
         if k > 1 then
           ntilde = 0
           for w in string.gmatch(line, "~") do ntilde = ntilde + 1 end
-          if ntilde == 3 then                                       -- 3 fields exactly
+          if ntilde == 3 then                                            -- 3 fields exactly
             if not (string.find(line, "*&", k)) then filepass = true end -- no mix with moments
           end
         end
@@ -665,9 +665,10 @@ function MomentsGUI()
   main_layout:add_label("<i>(close/restart the extension at will)</i>", 3, 3, 2)
   main_layout:add_button("", select_nop, 1, 5, 1) --ghost default
   main_layout:add_button(" Capture Moment ", capture_moment, 1, 5, 1)
-  main_layout:add_button(" Jump to Moment ", jump_to_moment, 2, 5, 1)
-  main_layout:add_button(" Remove Moment ", remove_moment, 3, 5, 1)
-  main_layout:add_button(" Reverse List ", antilist, 4, 5, 1)
+  main_layout:add_button(" Edit Moment ", capture_moment, 2, 5, 1)
+  main_layout:add_button(" Jump to Moment ", jump_to_moment, 3, 5, 1)
+  main_layout:add_button(" Remove Moment ", remove_moment, 4, 5, 1)
+  main_layout:add_button(" Reverse List ", antilist, 5, 5, 1)
   info_med2 = main_layout:add_label(" ", 1, 6, 4)
   main_layout:add_label("<hr>", 1, 7, 4)
   main_layout:add_label("<font color=darkblue><b>Recorded Checkpoint : </b></font>", 1, 8, 1)
@@ -1193,7 +1194,7 @@ function memosave()
           mtime = math.floor(tdur)
         else
           mtime = tonumber(string.sub(chtime, 7, 8)) + 60 * tonumber(string.sub(chtime, 4, 5)) +
-          3600 * tonumber(string.sub(chtime, 1, 2))
+              3600 * tonumber(string.sub(chtime, 1, 2))
         end
       else
         mtime = math.floor(t1000 * tonumber(chtime))
