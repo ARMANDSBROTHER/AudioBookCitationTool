@@ -4,6 +4,10 @@
 
 Adapt "Moments Tracker Revisted" for VLC to be better suited for referencing and quotes. Specifically in the context of Audio books, but should support documentaries.
 
+## License
+
+This project is licensed under GPLv3
+
 ## Missing features
 
 - Ability to edit "Moment" proterties, after creation:
@@ -24,6 +28,6 @@ None. come back later you impatient, viceful, unvirtuous trollop.
 
 ## Working from:
 
-[Moments tracker Revisited](https://addons.videolan.org/p/1848670)
+[Moments tracker Revisited](https://addons.videolan.org/p/1848670) (GPLv3 License)
 
-Revisited version of the original ["Moments Tracker" by A.Rahman Rashed](https://aur-tech.blogspot.com/2015/02/extending-vlc-moments-tracker.html). Designed to store "moments" - ie freely named bookmarks in a currently playing medium - for later reviews.
+Revisited version of the original ["Moments Tracker" by A.Rahman Rashed](https://addons.videolan.org/p/1154020/) (No License) Designed to store "moments" - ie freely named bookmarks in a currently playing medium - for later reviews.
