@@ -662,8 +662,8 @@ function MomentsGUI()
   currmom = 0
   main_layout = vlc.dialog("Moments & checkpoint")
   main_layout:add_label(" ", 1, 2)
-  main_layout:add_label("<b>Moments in current medium </b>", 1, 3, 2)
-  main_layout:add_label("<i>(close/restart the extension at will)</i>", 3, 3, 2)
+  main_layout:add_label("<b>Moments in current medium </b>", 1, 3, 3)
+  main_layout:add_label("<i>(close/restart the extension at will)</i>", 4, 3, 2)
   main_layout:add_button("", select_nop, 1, 5, 1) --ghost default
   main_layout:add_button(" Capture Moment ", capture_moment, 1, 5, 1)
   main_layout:add_button(" Edit Moment ", capture_moment, 2, 5, 1)
@@ -677,9 +677,9 @@ function MomentsGUI()
   display_checkpoint_data()
   main_layout:add_button("Checkpoint  !", mark_position, 1, 9, 1)
   main_layout:add_button(" Jump to Checkpoint ", jump_to_checkpoint, 2, 9, 1)
-  main_layout:add_button(" [MEDIA] ", back_tomedia, 4, 9, 1)
+  main_layout:add_button(" [MEDIA] ", back_tomedia, 5, 9, 1)
   main_layout:add_label("<font color=darkred>Medium name</font> : " .. medium_name, 1, 10, 4, 1)
-  mshow_list = main_layout:add_list(1, 4, 4)
+  mshow_list = main_layout:add_list(1, 4, 5)
   main_layout:show()
   display_moments(2)
 end
@@ -1005,7 +1005,7 @@ function display_moments(ksor)
     imp_button = main_layout:add_button(" Export Moments ", memosave, 1, 11, 4)
     k, kf = string.find(medium_uri, "file:///")
     if k == 1 then
-      check_xspf = main_layout:add_check_box("playlist ", false, 4, 11, 1)
+      check_xspf = main_layout:add_check_box("playlist ", false, 5, 11, 1)
     else
       check_xspf = nil
     end
